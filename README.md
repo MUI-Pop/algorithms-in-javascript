@@ -1,2 +1,2 @@
 # algorithms-in-javascript
-Common algorithms implemented in JavaScript
+Just some well known common algorithms implemented in JavaScript
