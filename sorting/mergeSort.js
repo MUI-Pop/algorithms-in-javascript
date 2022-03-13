@@ -38,6 +38,7 @@ function merge(lArr, rArr, storeArr) {
 function sort(arr) {
 
   let n = arr.length;
+
   if(n < 2) {
     return;
   }
@@ -46,8 +47,6 @@ function sort(arr) {
   let leftArr = arr.slice(0, mid);
   let rightArr = arr.slice(mid, n);
 
-  console.log(`Left arr ${leftArr}`);
-  console.log(`Right arr ${rightArr}`);
   sort(leftArr);
   sort(rightArr);
   
