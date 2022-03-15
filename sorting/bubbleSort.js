@@ -2,19 +2,27 @@
 // Bubble Sort
 ////////////////////////////////////////////////////
 
-let arr = [ 10, 3, 5, 1, 2 ];
-
+let arr = [10, 3, 5, 1, 2];
+//arr = [ 1, 2, 3, 5, 10 ];
 
 function sort(arr) {
-  for(let i=0; i < arr.length; i++) {
-    for(let j=i+1; j < arr.length; j++) {
-      if(arr[j] < arr[i]) {
-            let temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-      }
-    }
-  }
+	for (let i = arr.length - 1; i > 0; i--) {
+		let found = false;
+		for (let j = 0; j < i; j++) {
+			if (arr[j] > arr[j+1]) {
+				let temp = arr[j];
+				arr[j] = arr[j+1];
+				arr[j+1] = temp;
+				found = true;
+			}
+		}
+
+		if(!found) {
+			// Best case O(n)
+			//console.log('Exiting early as no match found'); 
+			break;
+		}
+	}
 }
 
 sort(arr);
